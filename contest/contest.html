@@ -1,0 +1,454 @@
+<!-- Contest  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Pictures/favicon.ico" type="image/x-icon">
+    <title>Contests | CodeFest.pk</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/9cba8e96cc.js" crossorigin="anonymous"></script>
+    <style>
+        /* Font  */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+        /* Setting the main image */
+        .mainimage {
+            margin-top: 2.5px;
+            height: 90vh;
+            width: 45vw;
+        }
+
+        /* using 1st font  */
+        .fontbig {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* using 2nd font  */
+        .font-2nd {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        /* Highligting */
+        #marking{
+            background-color: aquamarine;
+        }
+
+        /* Hoverable */
+        .boxhov:hover{
+            cursor: pointer;
+            outline: 2px solid red;
+        }
+
+        /* Footer Hr  */
+        hr{
+        height: 1px;
+        background-color: #060606;
+        border: none;   
+        }      
+    </style>
+</head>
+
+<bod>
+
+    <!-- ...................Navigation Menu & Logo...................... -->
+
+    <nav class="navbar has-shadow is-white" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item pl-3 pr-5" href="">
+                <img src="/Pictures/mainlogo/fitbglogo.png" width="126" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/home.html">
+                    <i class="fa-sharp fa-solid fa-house-user pr-1"></i> Home
+                </a>
+                
+                <a class="navbar-item" href="/home.html#updates">
+                    <i class="fa-solid fa-envelope pr-1"></i> Updates
+                </a>
+                
+                <a class="navbar-item" href="/contest/contest.html">
+                    <i class="fa-sharp fa-solid fa-dollar-sign pr-1"></i> Contests
+                </a>
+
+                <a class="navbar-item" href="/leaderboard.html">
+                    <i class="fa-solid fa-clipboard pr-1"></i> Leader Board
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        <i class="fa-solid fa-ellipsis-vertical pr-1"></i> More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="/files/about.html">
+                            <i class="fa-solid fa-book-open pr-1"></i> About
+                        </a>
+                        <a class="navbar-item" href="/contest/organize.html">
+                            <i class="fa-solid fa-handshake pr-1"></i> Organize CodeFest
+                        </a>
+                        <a class="navbar-item" href="/contest/events.html">
+                            <i class="fa-solid fa-calendar-days pr-1"></i> Events
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item" href="/bugs/bug.html">
+                            <i class="fa-solid fa-bug pr-1"></i> Report a Bug or Error
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-link is-outlined" href="/sponsorship/sponsor.html">
+                            <i class="fa-sharp fa-regular fa-thumbs-up"></i> <strong class="pl-2">Sponsor</strong>
+                        </a>
+                        <a class="button is-primary" href="/sign/signup.html">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-dark is-outlined" href="/sign/login.html">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!--....................................................... Actual Code.................................................  -->
+    <!-- Notification  -->
+    <div class="notification has-text-centered">
+       <span style="color: rgb(5, 5, 43);" class="font-2nd">Signup & Participate in Codefests </span> <a href="/sign/signup.html" class="button is-small is-primary">Sign Up</a>
+    </div>
+    <!-- Live Contests  -->
+        <div class="title is-3 has-text-centered" style="color: rgb(5, 5, 43);">Live Contests & Codefests</div>
+        <section class="section">
+            <div class="container columns">
+                <!-- Code:feb23f -->
+                    <div class="column is-4-tablet is-3-desktop">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="/assets/feb23f.png" alt="feb23f">
+                            </div>
+                            <div class="card-content has-text-centered">
+                                <p class="title is-size-5" style="color: rgb(5, 5, 43);">Build a frontend clone of Gmail</p>
+                                <p class="title is-size-5" style="color: rgb(5, 5, 43);">Prize : 5K/-PKR</p>
+                                <p class="title is-size-7" style="color: rgb(5, 5, 43);">Ends in</p>
+                                <p class="title is-size-6" style="color: rgb(5, 5, 43);" id="feb23f"></p>
+                            </div>
+                            <footer class="card-footer">
+                                <p class="card-footer-item">
+                                    <a href="/contest/contests/feb23f.html" class="button has-background-primary" style="color: white;">START NOW</a>
+                                </p>
+                            </footer>
+                        </div>
+                    </div>
+                    <!-- Code:feb23b -->
+                    <!-- <div class="column is-4-tablet is-3-desktop">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="/assets/feb23b.png" alt="feb23b">
+                            </div>
+                            <div class="card-content has-text-centered">
+                                <p class="title is-size-5" style="color: rgb(5, 5, 43);">Build a email sender like Gmail</p>
+                                <p class="title is-size-5" style="color: rgb(5, 5, 43);">Prize : 10K/-PKR</p>
+                                <p class="title is-size-7" style="color: rgb(5, 5, 43);">Ends in</p>
+                                <p class="title is-size-6" style="color: rgb(5, 5, 43);" id="feb23b"></p>
+                            </div>
+                            <footer class="card-footer">
+                                <p class="card-footer-item">
+                                    <a href="/contest/contests/feb23b.html" class="button has-background-primary" style="color: white;">START NOW</a>
+                                </p>
+                            </footer>
+                        </div>
+                    </div> -->
+                </div>       
+        </section>
+
+        <!-- Previous Contests  -->
+        <div class="title is-3 has-text-centered" style="color: rgb(5, 5, 43);">Previous Contests & Codefests</div>
+        <section class="section">
+            <div class="container columns">
+                <!-- Code:feb23f -->
+                    <div class="column is-4-tablet is-3-desktop">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="/assets/feb23f.png" alt="feb23f">
+                            </div>
+                            <div class="card-content has-text-centered">
+                                <p class="title is-size-5" style="color: rgb(5, 5, 43);">Build a frontend clone of Gmail</p>
+                                <p class="title is-size-5" style="color: rgb(5, 5, 43);">Prize : 5K/-PKR</p>
+                                <p class="title is-size-7" style="color: rgb(5, 5, 43);">Ended</p>
+                                <!-- <p class="title is-size-6" style="color: rgb(5, 5, 43);" id="feb23f"></p> -->
+                            </div>
+                            <footer class="card-footer">
+                                <p class="card-footer-item">
+                                    <a href="/contest/contests/feb23f.html#results" class="button has-background-primary" style="color: white;">Results</a>
+                                </p>
+                            </footer>
+                        </div>
+                    </div>
+                    <!-- Code:feb23b -->
+                    <!-- <div class="column is-4-tablet is-3-desktop">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="/assets/feb23b.png" alt="feb23b">
+                            </div>
+                            <div class="card-content has-text-centered">
+                                <p class="title is-size-5" style="color: rgb(5, 5, 43);">Build a email sender like Gmail</p>
+                                <p class="title is-size-5" style="color: rgb(5, 5, 43);">Prize : 10K/-PKR</p>
+                                <p class="title is-size-7" style="color: rgb(5, 5, 43);">Ended</p>
+                            </div>
+                            <footer class="card-footer">
+                                <p class="card-footer-item">
+                                    <a href="/contest/contests/feb23b.html" class="button has-background-primary" style="color: white;">Results</a>
+                                </p>
+                            </footer>
+                        </div>
+                    </div> -->
+                </div>       
+        </section>
+
+          <!-- Rules of Contests  -->
+          <div class="section has-background-link-light">
+            <div class="title is-3 has-text-centered" style="color: rgb(5, 5, 43);">Rules & Regulations</div>
+            <div class="font-2nd has-text-centered title is-6" style="color: rgb(5, 5, 43);">These rules are for all contests hold by CodeFest.pk only. To checkout rules for specific contest Please go to its specific page by clicking START NOW button at the bottom of specific contest card.</div>
+            <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">Each contest by CodeFest is a remote contest with some registration fee which you have to pay while submiting the project.</div>
+            <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">This registration fee is used by us to reward the winners & for paying other dues.</div>
+            <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">We will never make profit from the registration fees because it will be haram for us.</div>
+            <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">Each contest will have some specific time limit.</div>
+            <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">You can participate as many contests as you want.</div>
+            <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">Only two to three participants will get refund as per contest.</div>
+            <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">There will be no refund, after submission of projects.</div>
+            <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">Winners will be judged according to neatness of code, & as per requirements of specific contest.</div>
+            <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">We will decide winners after the contest has ended & announce the results on our Website & on our Instagram.</div>
+            <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">We will talk to the winners through Instagram or Whatsapp to give them their rewards.</div>
+            <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">Follow our <a href="https://www.instagram.com/codefest.pk" style="color: blue;">Instagram</a> to not miss any updates about contests, & about other things like, Terms, Privacy Policy, Rules etc.</div>
+            <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">Please make sure you have read all requirements & rules of specific contest before participating.</div>
+            <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">Your payments will be completely secured by specific payment gateway.</div>
+            <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">The upcoming contests will be decided by the founder. You can also give ideas for codefests on <a href="https://www.instagram.com/codefest.pk" style="color: blue;">Instagram</a> or on our <a href="https://wa.me/message/QWDPJGBNKGLVA1" style="color: blue;">Whatsapp</a>.</div></div>
+            <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">You can use all the technologies mentioned in the requirements of specific contest. You can also reuse the code, & try to not copy/paste code of or from other resources. So your skills can be improved.</div>
+            <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">We will make sure that everyone will get equal rights & there will be no place for cheaters.</div>
+            <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">If you have any queries, Please feel free to a contact us through <a href="https://www.instagram.com/codefest.pk" style="color: blue;">Instagram</a> or through our <a href="https://wa.me/message/QWDPJGBNKGLVA1" style="color: blue;">Whatsapp</a>.</div>
+        </div>
+
+    <!--.............................  Footer  .............................-->
+    <footer>       
+        <div class="has-background-grey-lighter section"> 
+    <!-- Wave Image -->
+    <div class="section">
+        <img src="../assets/wave.svg" alt="Not Image Found!">
+    </div>
+
+                <div class="columns">
+                    <!-- Logo  -->
+                    <div class="column">
+                        <article class="media notification has-background-grey-lighter">
+                            <div class="media-content">
+                                <div class="content is-flex is-justify-content-center">
+                                    <img class="" src="/Pictures/mainlogo/fitbglogo.png" width="200" height="38"><br>
+                                </div>    
+                                    <div class="has-text-centered" style="color: rgb(5, 5, 43);">
+                                        Codefest is a platform for beginner and professional developers. We hold online programming contests for developers. Founded in 2023 by a teenager programmer named as <a href="https://www.instagram.com/thehadinaseer" style="cursor: pointer; color: blue;"> Hadi Naseer</a>.
+                                    </div> 
+                                    <div class="content is-flex is-justify-content-center mt-3">             
+                                        <a href="https://www.instagram.com/codefest.pk"><i class="fa-2x fa-brands fa-square-instagram p-2" style="color: red;"></i></a>
+                                        <a href="https://www.instagram.com/thehadinaseer"><i class="fa-2x fa-brands fa-square-facebook p-2" style="color: red;"></i></a>
+                                        <a href="https://www.youtube.com/@codefestpk"><i class="fa-2x fa-brands fa-square-youtube p-2" style="color: red;"></i></a>
+                                        <a href="https://wa.me/message/QWDPJGBNKGLVA1"><i class="fa-2x fa-brands fa-square-whatsapp p-2" style="color: red;"></i></a>
+                                    </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- About for Desktop and Widescreens -->
+                    <div class="column is-hidden-mobile is-hidden-tablet-only is-hidden-touch">
+                        <article class="media notification has-background-grey-lighter">
+                            <div class="media-content">
+                                <div class="content is-flex">
+                                <ul style="list-style: none;">
+                                    <div class="title is-3" style="color: rgb(5, 5, 43);">About</div>                                        
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/terms.html">Terms & Conditions</a> </div> </li>
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/privacy.html">Privacy Policy</a> </div> </li>
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/sign/signup.html">Register</a> </div> </li>
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/sign/login.html">Login</a> </div> </li>
+                                </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- About for Mobile & Tablets -->
+                    <div class="column is-hidden-desktop is-hidden-widescreen">
+                        <article class="media notification has-background-grey-lighter">
+                            <div class="media-content">
+                                <div class="content is-flex is-justify-content-center ml-2">
+                                <ul style="list-style: none;">
+                                    <div class="title is-3" style="color: rgb(5, 5, 43);">About</div>                                        
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/terms.html">Terms & Conditions</a> </div> </li>
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/privacy.html">Privacy Policy</a> </div> </li>
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/sign/signup.html">Register</a> </div> </li>
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/sign/login.html">Login</a> </div> </li>
+                                </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- More for Desktops & Widescreens -->
+                    <div class="column">
+                        <article class="media notification has-background-grey-lighter is-hidden-mobile is-hidden-tablet-only is-hidden-touch">
+                            <div class="media-content">
+                                <div class="content is-flex">
+                                    <ul style="list-style: none;">    
+                                        <div class="title is-3" style="color: rgb(5, 5, 43);">More</div>                                    
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/blog.html">Blog</a> </div> </li>
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/community.html">Community</a> </div> </li>
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/contest/contest.html">Contest</a> </div> </li>
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/leaderboard.html">LeaderBoard</a> </div> </li>
+                                    </ul>                  
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- More for Mobile & Tablets -->
+                    <div class="column is-hidden-desktop is-hidden-widescreen">
+                        <article class="media notification has-background-grey-lighter">
+                            <div class="media-content">
+                                <div class="content is-flex is-justify-content-center mr-6">
+                                    <ul style="list-style: none;">    
+                                        <div class="title is-3" style="color: rgb(5, 5, 43);">More</div>                                    
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/blog.html">Blog</a> </div> </li>
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/community.html">Community</a> </div> </li>
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/contest/contest.html">Contest</a> </div> </li>
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/leaderboard.html">LeaderBoard</a> </div> </li>
+                                    </ul>                  
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Newsletter  -->
+                    <div class="column">
+                        <article class="media notification has-background-grey-lighter">
+                            <div class="media-content">
+                                <div class="content is-flex is-justify-content-center">   
+                                    <ul style="list-style: none;">    
+                                        <div class="title is-3 has-text-centered" style="color: rgb(5, 5, 43);">Newsletter</div>                               
+                                        <li> <div class="mt-4 has-text-centered" style="color: rgb(5, 5, 43);">Join our CodeFest newsletter and recieve updates and contests news.</div> </li>      
+                                        <form action="">
+                                            <div class="control">
+                                                <input class="input is-focused mt-4 is-link" type="email" placeholder="Enter Your Email">
+                                            </div>
+                                            <div class="control mt-4 has-text-centered">
+                                                <input class="button is-link" type="submit" value="Submit">
+                                            </div>
+                                        </form> 
+                                    </ul>  
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <hr>
+            </div>   
+            <hr>
+            <!-- Last Copy Right -->
+            <div class="has-background-grey-lighter has-text-centered is-hidden-desktop is-hidden-widescreen">
+             <strong><a href="/files/terms.html" style="color: blue;">Terms</a>&nbsp;|&nbsp;<a href="/files/privacy.html" style="color: blue;">Privacy Policy</a></strong>
+            </div>
+            <!-- Copy Right for Mobile & Tablet  -->
+            <div class="has-background-grey-lighter has-text-centered mt-4 is-hidden-desktop is-hidden-widescreen">
+            <strong>Copyright &copy; 2023 <a href="https://www.codefest.pk" style="color: blue;">CodeFest.Pk</a></strong> 
+            </div>
+            <div class="has-background-grey-lighter has-text-centered mt-4 is-hidden-desktop is-hidden-widescreen">
+                <strong><a href="#" style="color: blue;">Go to Top <i class="fa-solid fa-arrow-up"></i></a></strong> 
+            </div>
+            <!-- Copy Right for Desktop & Widescreens  -->
+            <div class="has-background-grey-lighter mt-4 is-hidden-mobile is-hidden-tablet-only is-hidden-touch">
+             <strong>Copyright &copy; 2023 <a href="https://www.codefest.pk" style="color: blue;">CodeFest.Pk</a></strong> 
+             <strong class="ml-6"><a href="/files/terms.html" style="color: blue;">Terms</a>&nbsp;|&nbsp;<a href="/files/privacy.html" style="color: blue;">Privacy Policy</a></strong> 
+             <strong class="ml-6"><a href="#" style="color: blue;">Go to Top <i class="fa-solid fa-arrow-up"></i></a></strong> 
+            </div>
+        </div>
+    </footer>
+    
+    </body>
+
+    <!-- Toggle the burger menu  -->
+    <script src="/burger.js"></script>
+    <!-- For Coundown on feb23f-->
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("mar 1, 2023 23:59:259").getTime();
+        
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="feb23f"
+  document.getElementById("feb23f").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("feb23f").innerHTML = "Times Up";
+  }
+}, 1000);
+
+    // For Coundown feb23b
+    
+    // Set the date we're counting down to
+    var countDownDate = new Date("mar 1, 2023 23:59:259").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+            
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+            
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+          // Output the result in an element with id="feb23b"
+          document.getElementById("feb23b").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+            
+          // If the count down is over, write some text 
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("feb23b").innerHTML = "Times Up";
+          }
+        }, 1000);
+    </script>
+
+</html>

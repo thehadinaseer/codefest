@@ -1,0 +1,559 @@
+<!-- Leader Board  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Pictures/favicon.ico" type="image/x-icon">
+    <title>LeaderBoard | CodeFest.pk</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/9cba8e96cc.js" crossorigin="anonymous"></script>
+    <style>
+        /* Font  */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+        /* Setting the main image */
+        .mainimage {
+            margin-top: 2.5px;
+            height: 90vh;
+            width: 45vw;
+        }
+
+        /* using 1st font  */
+        .fontbig {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* using 2nd font  */
+        .font-2nd {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        /* Highligting */
+        #marking{
+            background-color: aquamarine;
+        }
+
+        /* Hoverable */
+        .boxhov:hover{
+            cursor: pointer;
+            outline: 2px solid red; 
+            cursor: pointer;
+        }
+
+        .linkmove{
+            color: blue;
+            cursor: pointer;
+        }
+        .linkmove:hover{
+            color: red;
+            cursor: pointer;
+        }
+
+        /* Footer Hr  */
+        hr{
+        height: 1px;
+        background-color: #060606;
+        border: none;     
+    }
+
+    
+/* Table Styles */
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #4FC3A1;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}
+    </style>
+</head>
+
+<bod>
+
+    <!-- ...................Navigation Menu & Logo...................... -->
+
+    <nav class="navbar has-shadow is-white" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item pl-3 pr-5" href="">
+                <img src="/Pictures/mainlogo/fitbglogo.png" width="126" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="home.html">
+                    <i class="fa-sharp fa-solid fa-house-user pr-1"></i> Home
+                </a>
+                
+                <a class="navbar-item" href="/home.html#updates">
+                    <i class="fa-solid fa-envelope pr-1"></i> Updates
+                </a>
+                
+                <a class="navbar-item" href="/contest/contest.html">
+                    <i class="fa-sharp fa-solid fa-dollar-sign pr-1"></i> Contests
+                </a>
+
+                <a class="navbar-item" href="/leaderboard.html">
+                    <i class="fa-solid fa-clipboard pr-1"></i> Leader Board
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        <i class="fa-solid fa-ellipsis-vertical pr-1"></i> More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="/files/about.html">
+                            <i class="fa-solid fa-book-open pr-1"></i> About
+                        </a>
+                        <a class="navbar-item" href="/contest/organize.html">
+                            <i class="fa-solid fa-handshake pr-1"></i> Organize CodeFest
+                        </a>
+                        <a class="navbar-item" href="/contest/events.html">
+                            <i class="fa-solid fa-calendar-days pr-1"></i> Events
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item" href="/bugs/bug.html">
+                            <i class="fa-solid fa-bug pr-1"></i> Report a Bug or Error
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-link is-outlined" href="/sponsorship/sponsor.html">
+                            <i class="fa-sharp fa-regular fa-thumbs-up"></i> <strong class="pl-2">Sponsor</strong>
+                        </a>
+                        <a class="button is-primary" href="/sign/signup.html">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-dark is-outlined" href="/sign/login.html">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--....................................................... Actual Code.................................................  -->
+    <!-- Navigation Menu for Leader Board  -->
+    <header class="container">
+        <ul class="is-flex is-justify-content-center">
+            <li class="pl-2 pt-4"><a class="linkmove" href="#frontend">Frontend</a></li>
+            <li class="pl-2 pt-4"><a class="linkmove" href="#backend">Backend</a></li>
+            <li class="pl-2 pt-4"><a class="linkmove" href="#fullstack">Full-Stack</a></li>
+            <li class="pl-2 pt-4"><a class="linkmove" href="#android">Android</a></li>
+            <li class="pl-2 pt-4"><a class="linkmove" href="#webdes">Designers</a></li>
+        </ul>
+    </header>
+    <div class="title has-text-centered mt-4 fontbig" style="color: rgb(5, 5, 43);">Leader Board</div>
+    <!-- Frontend Developers  -->
+    <div class="section">
+        <div class="title is-3" style="color: rgb(5, 5, 43);" id="frontend">Frontend Developers</div>
+        <div class="notification is-hidden-desktop is-hidden-widescreen">Swipe horizontally <i class="fa-solid fa-left-long"></i></div>
+        <table class="fl-table">
+            <thead class="has-text-centered">
+            <tr>
+                <th>Name</th>
+                <th>Rank</th>
+                <th>Country</th>
+                <th>Points</th>
+            </tr>
+            </thead>
+        <tbody class="has-text-centered">
+            <tr>
+                <td>Hadi Naseer</td>
+                <td>1</td>
+                <td><img src="/assets/pk.png" alt="Pakistan" width="30px"></td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td>Hadi Naseer</td>
+                <td>2</td>
+                <td><img src="/assets/pk.png" alt="Pakistan" width="30px"></td>
+                <td>1900</td>
+        </tbody>
+        </table>
+    </div>
+    <!-- Backend Developers -->
+    <div class="section">
+        <div class="title is-3" style="color: rgb(5, 5, 43);" id="backend">Backend Developers</div>
+        <div class="notification is-hidden-desktop is-hidden-widescreen">Swipe horizontally <i class="fa-solid fa-left-long"></i></div>
+        <table class="fl-table">
+            <thead class="has-text-centered">
+            <tr>
+                <th>Name</th>
+                <th>Rank</th>
+                <th>Country</th>
+                <th>Points</th>
+            </tr>
+            </thead>
+        <tbody class="has-text-centered">
+            <tr>
+                <td>Hadi Naseer</td>
+                <td>1</td>
+                <td><img src="/assets/pk.png" alt="Pakistan" width="30px"></td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td>Hadi Naseer</td>
+                <td>2</td>
+                <td><img src="/assets/pk.png" alt="Pakistan" width="30px"></td>
+                <td>1900</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <!-- Full Stack Developers -->
+    <div class="section">
+        <div class="title is-3" style="color: rgb(5, 5, 43);" id="fullstack">Full Stack Developers</div>
+        <div class="notification is-hidden-desktop is-hidden-widescreen">Swipe horizontally <i class="fa-solid fa-left-long"></i></div>
+        <table class="fl-table">
+            <thead class="has-text-centered">
+            <tr>
+                <th>Name</th>
+                <th>Rank</th>
+                <th>Country</th>
+                <th>Points</th>
+            </tr>
+            </thead>
+        <tbody class="has-text-centered">
+            <tr>
+                <td>Hadi Naseer</td>
+                <td>1</td>
+                <td><img src="/assets/pk.png" alt="Pakistan" width="30px"></td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td>Hadi Naseer</td>
+                <td>2</td>
+                <td><img src="/assets/pk.png" alt="Pakistan" width="30px"></td>
+                <td>1900</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <!-- Android Developers -->
+    <div class="section">
+        <div class="title is-3" style="color: rgb(5, 5, 43);" id="android">Android Developers</div>
+        <div class="notification is-hidden-desktop is-hidden-widescreen">Swipe horizontally <i class="fa-solid fa-left-long"></i></div>
+        <table class="fl-table">
+            <thead class="has-text-centered">
+            <tr>
+                <th>Name</th>
+                <th>Rank</th>
+                <th>Country</th>
+                <th>Points</th>
+            </tr>
+            </thead>
+        <tbody class="has-text-centered">
+            <tr>
+                <td>Hadi Naseer</td>
+                <td>1</td>
+                <td><img src="/assets/pk.png" alt="Pakistan" width="30px"></td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td>Hadi Naseer</td>
+                <td>2</td>
+                <td><img src="/assets/pk.png" alt="Pakistan" width="30px"></td>
+                <td>1900</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <!-- Web Designers -->
+    <div class="section">
+        <div class="title is-3" style="color: rgb(5, 5, 43);" id="webdes">Web Designers</div>
+        <div class="notification is-hidden-desktop is-hidden-widescreen">Swipe horizontally <i class="fa-solid fa-left-long"></i></div>
+        <table class="fl-table">
+            <thead class="has-text-centered">
+            <tr>
+                <th>Name</th>
+                <th>Rank</th>
+                <th>Country</th>
+                <th>Points</th>
+            </tr>
+            </thead>
+        <tbody class="has-text-centered">
+            <tr>
+                <td>Hadi Naseer</td>
+                <td>1</td>
+                <td><img src="/assets/pk.png" alt="Pakistan" width="30px"></td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td>Hadi Naseer</td>
+                <td>2</td>
+                <td><img src="/assets/pk.png" alt="Pakistan" width="30px"></td>
+                <td>1900</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <!-- How to get points to rank high  -->
+    <div class="section has-background-link-light">
+        <div class="title is-3 has-text-centered" style="color: rgb(5, 5, 43);">How to get points to rank high?</div>
+        <div class="font-2nd has-text-centered title is-6" style="color: rgb(5, 5, 43);">Only 1st, 2nd, 3rd, 4th & 5th contest winners will get points.</div>
+        <div class="font-2nd has-text-centered title is-6" style="color: rgb(5, 5, 43);">Each contest winner will get some points & in leaderboard he/she will be ranked according to his/her points.</div>
+        <div class="font-2nd has-text-centered title is-6" style="color: rgb(5, 5, 43);">Leader Board will be updated every time the contest winners are announced.</div>
+        <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">With the reward the winners will also get points.</div>
+        <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">1st one will get 1000 points.</div>
+        <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">2nd one will get 500 points.</div>
+        <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">3rd one will get 350 points.</div>
+        <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">4th one will get 150 points.</div>
+        <div class="font-2nd has-text-centered title is-6 box boxhov" style="color: rgb(5, 5, 43);">5th one will get 80 points.</div>
+    </div>
+    <!--.............................  Footer  .............................-->
+    <footer>       
+        <div class="has-background-grey-lighter section"> 
+    <!-- Wave Image -->
+    <div class="section">
+        <img src="assets/wave.svg" alt="Not Image Found!">
+    </div>
+
+                <div class="columns">
+                    <!-- Logo  -->
+                    <div class="column">
+                        <article class="media notification has-background-grey-lighter">
+                            <div class="media-content">
+                                <div class="content is-flex is-justify-content-center">
+                                    <img class="" src="/Pictures/mainlogo/fitbglogo.png" width="200" height="38"><br>
+                                </div>    
+                                    <div class="has-text-centered" style="color: rgb(5, 5, 43);">
+                                        Codefest is a platform for beginner and professional developers. We hold online programming contests for developers. Founded in 2023 by a teenager programmer named as <a href="https://www.instagram.com/thehadinaseer" style="cursor: pointer; color: blue;"> Hadi Naseer</a>.
+                                    </div> 
+                                    <div class="content is-flex is-justify-content-center mt-3">             
+                                        <a href="https://www.instagram.com/codefest.pk"><i class="fa-2x fa-brands fa-square-instagram p-2" style="color: red;"></i></a>
+                                        <a href="https://www.instagram.com/thehadinaseer"><i class="fa-2x fa-brands fa-square-facebook p-2" style="color: red;"></i></a>
+                                        <a href="https://www.youtube.com/@codefestpk"><i class="fa-2x fa-brands fa-square-youtube p-2" style="color: red;"></i></a>
+                                        <a href="https://wa.me/message/QWDPJGBNKGLVA1"><i class="fa-2x fa-brands fa-square-whatsapp p-2" style="color: red;"></i></a>
+                                    </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- About for Desktop and Widescreens -->
+                    <div class="column is-hidden-mobile is-hidden-tablet-only is-hidden-touch">
+                        <article class="media notification has-background-grey-lighter">
+                            <div class="media-content">
+                                <div class="content is-flex">
+                                <ul style="list-style: none;">
+                                    <div class="title is-3" style="color: rgb(5, 5, 43);">About</div>                                        
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/terms.html">Terms & Conditions</a> </div> </li>
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/privacy.html">Privacy Policy</a> </div> </li>
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/sign/signup.html">Register</a> </div> </li>
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/sign/login.html">Login</a> </div> </li>
+                                </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- About for Mobile & Tablets -->
+                    <div class="column is-hidden-desktop is-hidden-widescreen">
+                        <article class="media notification has-background-grey-lighter">
+                            <div class="media-content">
+                                <div class="content is-flex is-justify-content-center ml-2">
+                                <ul style="list-style: none;">
+                                    <div class="title is-3" style="color: rgb(5, 5, 43);">About</div>                                        
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/terms.html">Terms & Conditions</a> </div> </li>
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/privacy.html">Privacy Policy</a> </div> </li>
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/sign/signup.html">Register</a> </div> </li>
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/sign/login.html">Login</a> </div> </li>
+                                </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- More for Desktops & Widescreens -->
+                    <div class="column">
+                        <article class="media notification has-background-grey-lighter is-hidden-mobile is-hidden-tablet-only is-hidden-touch">
+                            <div class="media-content">
+                                <div class="content is-flex">
+                                    <ul style="list-style: none;">    
+                                        <div class="title is-3" style="color: rgb(5, 5, 43);">More</div>                                    
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/blog.html">Blog</a> </div> </li>
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/community.html">Community</a> </div> </li>
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/contest/contest.html">Contest</a> </div> </li>
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="leaderboard.html">LeaderBoard</a> </div> </li>
+                                    </ul>                  
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- More for Mobile & Tablets -->
+                    <div class="column is-hidden-desktop is-hidden-widescreen">
+                        <article class="media notification has-background-grey-lighter">
+                            <div class="media-content">
+                                <div class="content is-flex is-justify-content-center mr-6">
+                                    <ul style="list-style: none;">    
+                                        <div class="title is-3" style="color: rgb(5, 5, 43);">More</div>                                    
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/blog.html">Blog</a> </div> </li>
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/community.html">Community</a> </div> </li>
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/contest/contest.html">Contest</a> </div> </li>
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="leaderboard.html">LeaderBoard</a> </div> </li>
+                                    </ul>                  
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Newsletter  -->
+                    <div class="column">
+                        <article class="media notification has-background-grey-lighter">
+                            <div class="media-content">
+                                <div class="content is-flex is-justify-content-center">   
+                                    <ul style="list-style: none;">    
+                                        <div class="title is-3 has-text-centered" style="color: rgb(5, 5, 43);">Newsletter</div>                               
+                                        <li> <div class="mt-4 has-text-centered" style="color: rgb(5, 5, 43);">Join our CodeFest newsletter and recieve updates and contests news.</div> </li>      
+                                        <form action="">
+                                            <div class="control">
+                                                <input class="input is-focused mt-4 is-link" type="email" placeholder="Enter Your Email">
+                                            </div>
+                                            <div class="control mt-4 has-text-centered">
+                                                <input class="button is-link" type="submit" value="Submit">
+                                            </div>
+                                        </form> 
+                                    </ul>  
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <hr>
+            </div>   
+            <hr>
+            <!-- Last Copy Right -->
+            <div class="has-background-grey-lighter has-text-centered is-hidden-desktop is-hidden-widescreen">
+             <strong><a href="/files/terms.html" style="color: blue;">Terms</a>&nbsp;|&nbsp;<a href="/files/privacy.html" style="color: blue;">Privacy Policy</a></strong>
+            </div>
+            <!-- Copy Right for Mobile & Tablet  -->
+            <div class="has-background-grey-lighter has-text-centered mt-4 is-hidden-desktop is-hidden-widescreen">
+            <strong>Copyright &copy; 2023 <a href="https://www.codefest.pk" style="color: blue;">CodeFest.Pk</a></strong> 
+            </div>
+            <div class="has-background-grey-lighter has-text-centered mt-4 is-hidden-desktop is-hidden-widescreen">
+                <strong><a href="#" style="color: blue;">Go to Top <i class="fa-solid fa-arrow-up"></i></a></strong> 
+            </div>
+            <!-- Copy Right for Desktop & Widescreens  -->
+            <div class="has-background-grey-lighter mt-4 is-hidden-mobile is-hidden-tablet-only is-hidden-touch">
+             <strong>Copyright &copy; 2023 <a href="https://www.codefest.pk" style="color: blue;">CodeFest.Pk</a></strong> 
+             <strong class="ml-6"><a href="/files/terms.html" style="color: blue;">Terms</a>&nbsp;|&nbsp;<a href="/files/privacy.html" style="color: blue;">Privacy Policy</a></strong> 
+             <strong class="ml-6"><a href="#" style="color: blue;">Go to Top <i class="fa-solid fa-arrow-up"></i></a></strong> 
+            </div>
+        </div>
+    </footer>
+    
+    </body>
+
+    <!-- Toggle the burger menu  -->
+    <script src="burger.js"></script>
+
+</html>

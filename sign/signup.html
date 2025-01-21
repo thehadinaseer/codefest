@@ -1,0 +1,385 @@
+<!-- Sign Up  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Pictures/favicon.ico" type="image/x-icon">
+    <title>Sign Up | CodeFest.pk</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/9cba8e96cc.js" crossorigin="anonymous"></script>
+    <style>
+        /* Font  */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+        /* Setting the main image */
+        .mainimage {
+            margin-top: 2.5px;
+            height: 90vh;
+            width: 45vw;
+        }
+
+        /* using 1st font  */
+        .fontbig {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* using 2nd font  */
+        .font-2nd {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        /* Highligting */
+        #marking{
+            background-color: aquamarine;
+        }
+
+        /* Hoverable */
+        .boxhov:hover{
+            cursor: pointer;
+            outline: 2px solid red;
+        }
+
+         /* Hoverable */
+         .boxhov10{
+            cursor: pointer;
+            outline: 2px solid hsl(217, 71%, 53%);
+        }
+        .boxhov10:hover{
+            cursor: pointer;
+            outline: 2px solid blue;
+        }
+
+        /* Footer Hr  */
+        hr{
+        height: 1px;
+        background-color: #060606;
+        border: none;     
+    }
+    </style>
+</head>
+
+<bod>
+
+    <!-- ...................Navigation Menu & Logo...................... -->
+
+    <nav class="navbar has-shadow is-white" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item pl-3 pr-5" href="">
+                <img src="/Pictures/mainlogo/fitbglogo.png" width="126" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/home.html">
+                    <i class="fa-sharp fa-solid fa-house-user pr-1"></i> Home
+                </a>
+                
+                <a class="navbar-item" href="/home.html#updates">
+                    <i class="fa-solid fa-envelope pr-1"></i> Updates
+                </a>
+                
+                <a class="navbar-item" href="/contest/contest.html">
+                    <i class="fa-sharp fa-solid fa-dollar-sign pr-1"></i> Contests
+                </a>
+
+                <a class="navbar-item" href="/leaderboard.html">
+                    <i class="fa-solid fa-clipboard pr-1"></i> Leader Board
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        <i class="fa-solid fa-ellipsis-vertical pr-1"></i> More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="/files/about.html">
+                            <i class="fa-solid fa-book-open pr-1"></i> About
+                        </a>
+                        <a class="navbar-item" href="/contest/organize.html">
+                            <i class="fa-solid fa-handshake pr-1"></i> Organize CodeFest
+                        </a>
+                        <a class="navbar-item" href="/contest/events.html">
+                            <i class="fa-solid fa-calendar-days pr-1"></i> Events
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item" href="/bugs/bug.html">
+                            <i class="fa-solid fa-bug pr-1"></i> Report a Bug or Error
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-link is-outlined" href="/sponsorship/sponsor.html">
+                            <i class="fa-sharp fa-regular fa-thumbs-up"></i> <strong class="pl-2">Sponsor</strong>
+                        </a>
+                        <a class="button is-primary" href="/sign/signup.html">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-dark is-outlined" href="/sign/login.html">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+<!--....................................................... Actual Code.................................................  -->
+        <!-- Columns  -->
+        <div class="columns">
+            <!-- left Column -->
+            <div class="column">
+                <section class="section is-hidden-mobile">
+                    <img src="/assets/login.png" alt="Img Not Found!" width="750vw">
+                </section>
+            </div>
+            <!-- Right Column-->
+            <div class="column section is-one-third">
+                <section class="box font-2nd has-background-grey-lighter is-small">                      
+                    <div class="title is-3 has-text-centered" style="color: rgb(5, 5, 43);">Create a user account</div>    
+                    <form action="">
+                        <fieldset>
+                            <div class="field">
+                              <label class="label"><i class="fa-solid fa-user"></i>&nbsp;User Name</label>
+                              <div class="control">
+                                <input class="input is-link" type="text" placeholder="e.g. abdulhadi01" required>
+                              </div>
+                            </div>
+
+                            <div class="field">
+                              <label class="label"><i class="fa-solid fa-envelope"></i>&nbsp;Email</label>
+                              <div class="control">
+                                <input class="input is-link" type="email" placeholder="e.g. abdulhadi@gmail.com" required>
+                              </div>
+                            </div>
+                            
+                            <div class="field">
+                              <label class="label"><i class="fa-solid fa-lock"></i>&nbsp;Password</label>
+                              <div class="control">
+                                <input class="input is-link" type="password" placeholder="e.g. Password" 
+                                id="typepass" required>                        
+                              </div>
+                            </div>
+
+                            <div class="is-flex is-justify-content-end">
+                                <p style="color: blue; cursor: pointer;" 
+                                onclick="Toggle()" class="hideshow">Show Password &nbsp;</p> 
+                            </div>  
+
+                            <div class="field">
+                              <label class="label"><i class="fa-solid fa-lock"></i>&nbsp;Confirm Password</label>
+                              <div class="control">
+                                <input class="input is-link" type="password" placeholder="e.g. Confirm Password" id="typepass1" required>                        
+                              </div>
+                            </div>
+    
+                            <div class="is-flex is-justify-content-end">
+                                <p style="color: blue; cursor: pointer;" type="checkbox" 
+                                onclick="Toggle1()" class="hideshow">Show Password &nbsp;</p> 
+                            </div>   
+
+                            <div class="has-text-centered p-4">
+                                Please make sure your password is in encrypted form ( e.g. "*******" ) Thankyou.
+                            </div>
+                            
+                            <div class="field has-text-centered">
+                                <input type="submit" class="button is-link" value="Sign Up">
+                            </div>
+    
+                            <div class="field has-text-centered pt-3 pb-3">
+                                -------------------- or sign up with --------------------
+                            </div>
+                            <!-- Google & GitHub --> 
+                            <div class="field has-text-centered pt-2">
+                                <a href=""><img src="/assets/google.png" alt="Google Logo!" width="55px" class="boxhov10" ></a> 
+                                <a href="" class="pl-5"><img src="/assets/github.png" alt="Github Logo!" width="55px" class="boxhov10" ></a>
+                            </div>
+                            
+                            <div class="is-flex is-justify-content-center pt-3" style="color: rgb(5, 5, 43);">                              
+                                Already have an account? &nbsp;<a href="/sign/login.html" style="color: blue;">Sign in</a>
+                            </div>
+                          </fieldset>
+                    </form>
+                </div>   
+        </div>
+    <!--.............................  Footer  .............................-->
+    <footer>       
+        <div class="has-background-grey-lighter section"> 
+    <!-- Wave Image -->
+    <div class="section">
+        <img src="/assets/wave.svg" alt="Not Image Found!">
+    </div>
+
+                <div class="columns">
+                    <!-- Logo  -->
+                    <div class="column">
+                        <article class="media notification has-background-grey-lighter">
+                            <div class="media-content">
+                                <div class="content is-flex is-justify-content-center">
+                                    <img class="" src="/Pictures/mainlogo/fitbglogo.png" width="200" height="38"><br>
+                                </div>    
+                                    <div class="has-text-centered" style="color: rgb(5, 5, 43);">
+                                        Codefest is a platform for beginner and professional developers. We hold online programming contests for developers. Founded in 2023 by a teenager programmer named as <a href="https://www.instagram.com/thehadinaseer" style="cursor: pointer; color: blue;"> Hadi Naseer</a>.
+                                    </div> 
+                                    <div class="content is-flex is-justify-content-center mt-3">             
+                                        <a href="https://www.instagram.com/codefest.pk"><i class="fa-2x fa-brands fa-square-instagram p-2" style="color: red;"></i></a>
+                                        <a href="https://www.instagram.com/thehadinaseer"><i class="fa-2x fa-brands fa-square-facebook p-2" style="color: red;"></i></a>
+                                        <a href="https://www.youtube.com/@codefestpk"><i class="fa-2x fa-brands fa-square-youtube p-2" style="color: red;"></i></a>
+                                        <a href="https://wa.me/message/QWDPJGBNKGLVA1"><i class="fa-2x fa-brands fa-square-whatsapp p-2" style="color: red;"></i></a>
+                                    </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- About for Desktop and Widescreens -->
+                    <div class="column is-hidden-mobile is-hidden-tablet-only is-hidden-touch">
+                        <article class="media notification has-background-grey-lighter">
+                            <div class="media-content">
+                                <div class="content is-flex">
+                                <ul style="list-style: none;">
+                                    <div class="title is-3" style="color: rgb(5, 5, 43);">About</div>                                        
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/terms.html">Terms & Conditions</a> </div> </li>
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/privacy.html">Privacy Policy</a> </div> </li>
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/sign/signup.html">Register</a> </div> </li>
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/sign/login.html">Login</a> </div> </li>
+                                </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- About for Mobile & Tablets -->
+                    <div class="column is-hidden-desktop is-hidden-widescreen">
+                        <article class="media notification has-background-grey-lighter">
+                            <div class="media-content">
+                                <div class="content is-flex is-justify-content-center ml-2">
+                                <ul style="list-style: none;">
+                                    <div class="title is-3" style="color: rgb(5, 5, 43);">About</div>                                        
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/terms.html">Terms & Conditions</a> </div> </li>
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/privacy.html">Privacy Policy</a> </div> </li>
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/sign/signup.html">Register</a> </div> </li>
+                                   <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/sign/login.html">Login</a> </div> </li>
+                                </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- More for Desktops & Widescreens -->
+                    <div class="column">
+                        <article class="media notification has-background-grey-lighter is-hidden-mobile is-hidden-tablet-only is-hidden-touch">
+                            <div class="media-content">
+                                <div class="content is-flex">
+                                    <ul style="list-style: none;">    
+                                        <div class="title is-3" style="color: rgb(5, 5, 43);">More</div>                                    
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/blog.html">Blog</a> </div> </li>
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/community.html">Community</a> </div> </li>
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/contest/contest.html">Contest</a> </div> </li>
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/leaderboard.html">LeaderBoard</a> </div> </li>
+                                    </ul>                  
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- More for Mobile & Tablets -->
+                    <div class="column is-hidden-desktop is-hidden-widescreen">
+                        <article class="media notification has-background-grey-lighter">
+                            <div class="media-content">
+                                <div class="content is-flex is-justify-content-center mr-6">
+                                    <ul style="list-style: none;">    
+                                        <div class="title is-3" style="color: rgb(5, 5, 43);">More</div>                                    
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/blog.html">Blog</a> </div> </li>
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/files/community.html">Community</a> </div> </li>
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/contest/contest.html">Contest</a> </div> </li>
+                                       <li> <div class="mt-4" style="color: rgb(5, 5, 43);"> <a href="/leaderboard.html">LeaderBoard</a> </div> </li>
+                                    </ul>                  
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Newsletter  -->
+                    <div class="column">
+                        <article class="media notification has-background-grey-lighter">
+                            <div class="media-content">
+                                <div class="content is-flex is-justify-content-center">   
+                                    <ul style="list-style: none;">    
+                                        <div class="title is-3 has-text-centered" style="color: rgb(5, 5, 43);">Newsletter</div>                               
+                                        <li> <div class="mt-4 has-text-centered" style="color: rgb(5, 5, 43);">Join our CodeFest newsletter and recieve updates and contests news.</div> </li>      
+                                        <form action="">
+                                            <div class="control">
+                                                <input class="input is-focused mt-4 is-link" type="email" placeholder="Enter Your Email">
+                                            </div>
+                                            <div class="control mt-4 has-text-centered">
+                                                <button class="button is-link">Submit</button>
+                                            </div>
+                                        </form> 
+                                    </ul>  
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <hr>
+            </div>   
+            <hr>
+            <!-- Last Copy Right -->
+            <div class="has-background-grey-lighter has-text-centered is-hidden-desktop is-hidden-widescreen">
+             <strong><a href="/files/terms.html" style="color: blue;">Terms</a>&nbsp;|&nbsp;<a href="/files/privacy.html" style="color: blue;">Privacy Policy</a></strong>
+            </div>
+            <!-- Copy Right for Mobile & Tablet  -->
+            <div class="has-background-grey-lighter has-text-centered mt-4 is-hidden-desktop is-hidden-widescreen">
+            <strong>Copyright &copy; 2023 <a href="https://www.codefest.pk" style="color: blue;">CodeFest.Pk</a></strong> 
+            </div>
+            <div class="has-background-grey-lighter has-text-centered mt-4 is-hidden-desktop is-hidden-widescreen">
+                <strong><a href="#" style="color: blue;">Go to Top <i class="fa-solid fa-arrow-up"></i></a></strong> 
+            </div>
+            <!-- Copy Right for Desktop & Widescreens  -->
+            <div class="has-background-grey-lighter mt-4 is-hidden-mobile is-hidden-tablet-only is-hidden-touch">
+             <strong>Copyright &copy; 2023 <a href="https://www.codefest.pk" style="color: blue;">CodeFest.Pk</a></strong> 
+             <strong class="ml-6"><a href="/files/terms.html" style="color: blue;">Terms</a>&nbsp;|&nbsp;<a href="/files/privacy.html" style="color: blue;">Privacy Policy</a></strong> 
+             <strong class="ml-6"><a href="#" style="color: blue;">Go to Top <i class="fa-solid fa-arrow-up"></i></a></strong> 
+            </div>
+        </div>
+    </footer>
+    
+    </body>
+    <!-- Show Password -->
+    <script>
+        // Change the type of input to password or text
+        function Toggle() {
+            var temp = document.getElementById("typepass");
+            if (temp.type === "password") {
+                temp.type = "text";
+            }
+            else {
+                temp.type = "password";
+            }
+        }
+        // Change the type of confirm input to password or text
+        function Toggle1() {   
+            var temp = document.getElementById("typepass1");
+            if (temp.type === "password") {
+                temp.type = "text";
+            }
+            else {
+                temp.type = "password";
+            }
+        }
+    </script>
+    <!-- Toggle the burger menu  -->
+    <script src="/burger.js"></script>
+
+</html>
